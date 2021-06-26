@@ -1,0 +1,38 @@
+@import "dropstyle.css";
+@import "fonts.css";
+
+h1 {
+    text-align: center;
+}
+
+.reg-form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    background: rgba(68, 169, 224, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.inputs {
+    background: rgb(227, 225, 232);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.inputs div {
+    margin: 4px 6px;
+}
+
+.inputs .one-row-label {
+    display: inline-block;
+    width: 100px;
+}
+
+input{
+    width: 300px;
+}
+
+.expanded-text{
+    display: block;
+}
