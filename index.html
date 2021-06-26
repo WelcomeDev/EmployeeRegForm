@@ -10,25 +10,96 @@
 <form action="#" class="reg-form">
     <!--acc-id - мыло и пароль-->
     <section class="inputs">
+        <div>
+            <label class="one-row-label"
+                   for="email">
+                Email:
+            </label>
+            <input id="email" name="email" type="email">
+        </div>
 
+        <div>
+            <label class="one-row-label"
+                   for="password">
+                Password:
+            </label>
+            <input id="password" name="password" type="password">
+        </div>
     </section>
     <!--Фио, дата, гендер, телефон-->
     <div>
         <h2>Introduce yourself!</h2>
         <section class="inputs">
-
+            <div>
+                <label class="one-row-label"
+                       for="full_name">
+                    Full name:
+                </label>
+                <input id="full_name" name="fullName" type="text">
+            </div>
+            <div>
+                <label class="one-row-label" for="birthday">
+                    Birthday:
+                </label>
+                <input id="birthday" name="birthday" type="date">
+            </div>
+            <div>
+                <label for="gender_male"
+                       class="one-row-label">
+                    Gender:
+                </label>
+                <label>M
+                    <input id="gender_male" name="gender" type="radio" value="MALE">
+                </label>
+                <label>F
+                    <input name="gender" type="radio" value="FEMALE">
+                </label>
+            </div>
+            <div>
+                <label for="phone"
+                       class="one-row-label">
+                    Phone:
+                </label>
+                <input id="phone" name="phone" type="number">
+            </div>
         </section>
     </div>
     <!--Сылка на профиль, зп, токен, коммент-->
     <div>
         <h2>Tell us more about yourself!</h2>
         <section class="inputs">
+            <div>
+                <label for="profile_url"
+                       class="one-row-label">
+                    Profile link:
+                </label>
+                <input id="profile_url" name="profileUrl" type="text">
+            </div>
+            <div>
+                <label for="salary" class="one-row-label">
+                    Expected salary:
+                </label>
+                <input id="salary" name="salary" type="number">
+            </div>
+            <div>
+                <label for="token" class="one-row-label">
+                    Token:
+                </label>
+                <input id="token" name="tokenId" type="text"
+                       value="3fa85f64-5717-4562-b3fc-2c963f66afa6">
+            </div>
+            <textarea name="comment"
+                      class="expanded-text"
+                      placeholder="Tell us even more =)">
 
+            </textarea>
         </section>
     </div>
     <!--manual-->
     <div>
-
+        <input id="manual" name="acceptManual" type="checkbox"
+               value="true">
+        <label for="manual">I agree with service data processing (or smth like that)</label>
     </div>
     <button>Submit!</button>
 </form>
