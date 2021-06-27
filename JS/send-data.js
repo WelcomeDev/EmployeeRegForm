@@ -1,9 +1,7 @@
 window.addEventListener("load", () => {
     async function sendData(data) {
         const xhr = new XMLHttpRequest();
-
-        console.log(`Sending data: ${JSON.stringify(data)}`);
-        xhr.open("POST", "https://server.edu.inkode.ru/employee/create");
+        xhr.open("POST", "https://server.edu.inkode.ru/employee/v2/create");
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.responseType = "json";
 

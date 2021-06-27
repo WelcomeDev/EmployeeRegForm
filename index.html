@@ -8,6 +8,7 @@
 </head>
 <body>
 <h1>Create your profile!</h1>
+<button onclick="viewStuff()" >Our stuff</button>
 <form class="reg-form" id="reg_form">
     <!--acc-id - мыло и пароль-->
     <section class="inputs">
@@ -120,7 +121,7 @@
                 </label>
                 <input id="token" name="tokenId" type="text"
                        class="all-width-input"
-                       value="3fa85f64-5717-4562-b3fc-2c963f66afa6"
+                       value="39c31a6e-9321-4021-b09d-3cc5bb730a8c"
                        maxlength="36"
                        required>
             </div>
@@ -143,5 +144,14 @@
     <script src="JS/send-data.js"></script>
     <script src="JS/registration-validation.js"></script>
 </form>
+<script>
+    function viewStuff(){
+        const token = document.getElementById("token");
+        const value = token.value;
+        console.log(`Showing employees for ${value}`);
+
+        window.location.href = `EmployeeTable.html?tokenId=${value}`;
+    }
+</script>
 </body>
 </html>
