@@ -1,10 +1,6 @@
 @import "dropstyle.css";
 @import "fonts.css";
 
-h1 {
-    text-align: center;
-}
-
 .reg-form {
     margin-left: auto;
     margin-right: auto;
@@ -14,9 +10,13 @@ h1 {
     padding: 20px;
 }
 
+.accept-manual,
+.inputs{
+    padding: 5px;
+}
+
 .inputs {
     background: rgba(164,225,255,0.45);
-    padding: 5px;
     border-radius: 10px;
 }
 
@@ -29,10 +29,32 @@ h1 {
     width: 100px;
 }
 
-input{
-    width: 300px;
+.all-width-input{
+    width: calc(100% - 100px - 10px);
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 2px;
 }
 
 .expanded-text{
     display: block;
+    width: 100%;
+    resize: none;
+}
+
+.submit-button{
+    margin: 5px auto;
+    display: block;
+    padding: 2px;
+    border-radius: 10px;
+    font-size: 28px;
+    background: transparent;
+    border: #0c80c5 1px solid;
+    color: #848484;
+}
+
+.submit-button:hover{
+    border: #0c80c5 2px solid;
+    padding: 1px;
+    color: #313134;
 }

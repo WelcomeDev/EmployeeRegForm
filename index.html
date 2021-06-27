@@ -16,6 +16,7 @@
                 Email:
             </label>
             <input id="email" name="email" type="email"
+                   class="all-width-input"
                    required
                    value="some@email.ru">
         </div>
@@ -27,13 +28,14 @@
             </label>
             <input id="password" name="password" type="password"
                    pattern="^(?=.*[a-z])(?=.[A-Z)(?=.\d)[A-Za-z\d]{6,12}$"
+                   class="all-width-input"
                    required
                    value="Abye245">
         </div>
     </section>
     <!--Фио, дата, гендер, телефон-->
     <div>
-        <h2>Introduce yourself!</h2>
+        <h2>Introduce yourself</h2>
         <section class="inputs">
             <div>
                 <label class="one-row-label"
@@ -41,6 +43,7 @@
                     Full name:
                 </label>
                 <input id="full_name" name="fullName" type="text"
+                       class="all-width-input"
                        pattern="^[\w ]{2,}$"
                        required
                        value="Ishchenko F">
@@ -49,21 +52,27 @@
                 <label class="one-row-label" for="birthday">
                     Birthday:
                 </label>
-                <input id="birthday" name="birthday" type="date">
+                <input id="birthday" name="birthday" type="date"
+                       class="all-width-input">
             </div>
             <div>
                 <label for="gender_male"
                        class="one-row-label">
                     Gender:
                 </label>
-                <label>M
+                <label>
                     <input id="gender_male" name="gender" type="radio" value="MALE"
                            required
                            checked>
+                    Male
                 </label>
-                <label>F
+                <br/>
+                <label for="gender_male"
+                       class="one-row-label"></label>
+                <label>
                     <input name="gender" type="radio" value="FEMALE"
                            required>
+                    Female
                 </label>
             </div>
             <div>
@@ -72,6 +81,7 @@
                     Phone:
                 </label>
                 <input id="phone" name="phone" type="tel"
+                       class="all-width-input"
                        pattern="^\+7[0-9]{10}$"
                        value="+71111456785">
             </div>
@@ -79,20 +89,22 @@
     </div>
     <!--Сылка на профиль, зп, токен, коммент-->
     <div>
-        <h2>Tell us more about yourself!</h2>
+        <h2>Tell us more about yourself</h2>
         <section class="inputs">
             <div>
                 <label for="profile_url"
                        class="one-row-label">
                     Profile link:
                 </label>
-                <input id="profile_url" name="profileUrl" type="url">
+                <input id="profile_url" name="profileUrl" type="url"
+                       class="all-width-input">
             </div>
             <div>
                 <label for="salary" class="one-row-label">
-                    Expected salary:
+                    Salary:
                 </label>
                 <input id="salary" name="salary" type="text"
+                       class="all-width-input"
                        pattern="^\d{1,}$"
                        required
                        value="300">
@@ -102,23 +114,25 @@
                     Token:
                 </label>
                 <input id="token" name="tokenId" type="text"
+                       class="all-width-input"
                        value="3fa85f64-5717-4562-b3fc-2c963f66afa6"
                        required>
             </div>
             <textarea name="comment"
                       class="expanded-text"
                       placeholder="Tell us even more =)"
-                      maxlength="200"></textarea>
+                      maxlength="200"
+                      rows="3"></textarea>
         </section>
     </div>
     <!--manual-->
-    <div>
+    <div class="accept-manual">
         <input id="manual" name="acceptManual" type="checkbox"
                value="true"
                required>
         <label for="manual">I agree with service data processing (or smth like that)</label>
     </div>
-    <button>Submit!</button>
+    <button class="submit-button">Submit!</button>
 
     <script src="JS/send-data.js"></script>
 </form>
