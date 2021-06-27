@@ -15,7 +15,8 @@
                    for="email">
                 Email:
             </label>
-            <input id="email" name="email" type="email">
+            <input id="email" name="email" type="email"
+                   required>
         </div>
 
         <div>
@@ -23,7 +24,8 @@
                    for="password">
                 Password:
             </label>
-            <input id="password" name="password" type="password">
+            <input id="password" name="password" type="password"
+                   pattern="^[A-Za-z0-9]{6,12}$">
         </div>
     </section>
     <!--Фио, дата, гендер, телефон-->
@@ -35,7 +37,8 @@
                        for="full_name">
                     Full name:
                 </label>
-                <input id="full_name" name="fullName" type="text">
+                <input id="full_name" name="fullName" type="text"
+                       pattern="^[\w ]{2,}$">
             </div>
             <div>
                 <label class="one-row-label" for="birthday">
@@ -49,10 +52,12 @@
                     Gender:
                 </label>
                 <label>M
-                    <input id="gender_male" name="gender" type="radio" value="MALE">
+                    <input id="gender_male" name="gender" type="radio" value="MALE"
+                           required>
                 </label>
                 <label>F
-                    <input name="gender" type="radio" value="FEMALE">
+                    <input name="gender" type="radio" value="FEMALE"
+                           required>
                 </label>
             </div>
             <div>
@@ -60,7 +65,8 @@
                        class="one-row-label">
                     Phone:
                 </label>
-                <input id="phone" name="phone" type="number">
+                <input id="phone" name="phone" type="number"
+                       pattern="^\\+7[0-9]{10}$">
             </div>
         </section>
     </div>
@@ -73,24 +79,27 @@
                        class="one-row-label">
                     Profile link:
                 </label>
-                <input id="profile_url" name="profileUrl" type="text">
+                <input id="profile_url" name="profileUrl" type="url">
             </div>
             <div>
                 <label for="salary" class="one-row-label">
                     Expected salary:
                 </label>
-                <input id="salary" name="salary" type="number">
+                <input id="salary" name="salary" type="number"
+                       required>
             </div>
             <div>
                 <label for="token" class="one-row-label">
                     Token:
                 </label>
                 <input id="token" name="tokenId" type="text"
-                       value="3fa85f64-5717-4562-b3fc-2c963f66afa6">
+                       value="3fa85f64-5717-4562-b3fc-2c963f66afa6"
+                       required>
             </div>
             <textarea name="comment"
                       class="expanded-text"
-                      placeholder="Tell us even more =)">
+                      placeholder="Tell us even more =)"
+                      maxlength="200">
 
             </textarea>
         </section>
@@ -98,7 +107,8 @@
     <!--manual-->
     <div>
         <input id="manual" name="acceptManual" type="checkbox"
-               value="true">
+               value="true"
+               required>
         <label for="manual">I agree with service data processing (or smth like that)</label>
     </div>
     <button>Submit!</button>
