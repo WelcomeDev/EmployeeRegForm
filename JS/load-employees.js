@@ -6,7 +6,7 @@ window.onload = (event) => {
     const xhr = new XMLHttpRequest();
     xhr.responseType = "json";
     const token = extractToken(window.location.toString());
-    const url = `https://server.edu.inkode.ru/employee/list?${token}`;
+    const url = `https://server.edu.inkode.ru/employee/list?tokenId=${token}`;
 
     xhr.onload += (event) => {
         function createTable(emps) {
@@ -16,6 +16,7 @@ window.onload = (event) => {
         if (xhr.response != null) {
             const emps = JSON.parse(xhr.response);
             createTable(emps);
+            alert(xhr.response);
         }
     }
 
