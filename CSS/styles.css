@@ -9,13 +9,13 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     width: 500px;
-    background: rgba(68, 169, 224, 0.2);
+    background: rgba(133,192,255,0.25);
     border-radius: 10px;
     padding: 20px;
 }
 
 .inputs {
-    background: rgb(227, 225, 232);
+    background: rgba(164,225,255,0.45);
     padding: 5px;
     border-radius: 10px;
 }
