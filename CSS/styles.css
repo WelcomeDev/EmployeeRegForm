@@ -2,21 +2,18 @@
 @import "fonts.css";
 
 .reg-form {
-    margin-left: auto;
-    margin-right: auto;
-    width: 500px;
-    background: rgba(133,192,255,0.25);
+    background: rgba(133, 192, 255, 0.25);
     border-radius: 10px;
     padding: 20px;
 }
 
 .accept-manual,
-.inputs{
+.inputs {
     padding: 5px;
 }
 
 .inputs {
-    background: rgba(164,225,255,0.45);
+    background: rgba(164, 225, 255, 0.45);
     border-radius: 10px;
 }
 
@@ -29,20 +26,21 @@
     width: 100px;
 }
 
-.all-width-input{
+.all-width-input {
     width: calc(100% - 100px - 10px);
     font-size: 16px;
     border-radius: 5px;
     padding: 2px;
 }
 
-.expanded-text{
+.expanded-text {
     display: block;
     width: 100%;
     resize: none;
 }
 
-.submit-button{
+.submit-button,
+.view-stuff-button{
     margin: 5px auto;
     display: block;
     padding: 2px;
@@ -53,8 +51,17 @@
     color: #848484;
 }
 
-.submit-button:hover{
+.submit-button:hover,
+.view-stuff-button:hover {
     border: #0c80c5 2px solid;
     padding: 1px;
     color: #313134;
+}
+
+.reg-content{
+    width: 500px;
+    margin: 10px auto;
+}
+
+.view-stuff-button{
 }
