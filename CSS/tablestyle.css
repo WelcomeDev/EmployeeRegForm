@@ -1,0 +1,18 @@
+#employees_table{
+    border-collapse: collapse;
+}
+
+#employees_table,
+#employees_table td,
+#employees_table tr{
+    border: 1px solid black;
+}
+
+td{
+    padding: 10px;
+}
+
+#table_header{
+    font-weight: bold;
+    font-size: 18px;
+}
