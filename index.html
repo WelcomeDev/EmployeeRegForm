@@ -121,6 +121,7 @@
                     </label>
                     <input id="token" name="tokenId" type="text"
                            class="all-width-input"
+                           readonly
                            value="39c31a6e-9321-4021-b09d-3cc5bb730a8c"
                            maxlength="36"
                            required>
@@ -140,24 +141,24 @@
             <label for="manual">I agree with service data processing (or smth like that)</label>
         </div>
         <button class="submit-button">Submit!</button>
-
-        <script src="JS/send-data.js"></script>
-        <script src="JS/registration-validation.js"></script>
     </form>
-    <script>
-        function viewStuff() {
-            const token = document.getElementById("token");
-            const value = token.value;
-            console.log(`Showing employees for ${value}`);
-
-            window.location.href = `EmployeeTable.html?tokenId=${value}`;
-        }
-    </script>
 </section>
 <button onclick="viewStuff()"
         class="view-stuff-button"
         title="See employees table">
     Our stuff
 </button>
+
+<script src="JS/send-data.js"></script>
+<script src="JS/registration-validation.js"></script>
+<script>
+    function viewStuff() {
+        const token = document.getElementById("token");
+        const value = token.value;
+        console.log(`Showing employees for ${value}`);
+
+        window.location.href = `EmployeeTable.html?tokenId=${value}`;
+    }
+</script>
 </body>
 </html>

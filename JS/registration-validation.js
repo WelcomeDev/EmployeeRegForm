@@ -1,27 +1,36 @@
-let invalidInputBorder = "red 1px solid";
-let validInputBorder = "";
-
 let passwordField = document.getElementById("password");
-// passwordField.oninput = (event) => {
-//     console.log(`Validity - ${passwordField.checkValidity()}`)
-//     if (passwordField.checkValidity() === true) {
-//         passwordField.style.border = validInputBorder;
-//         passwordField.setCustomValidity("");
-//     } else {
-//         passwordField.style.border = invalidInputBorder
-//         passwordField.setCustomValidity("Password must contain capital, lowercase letters and digits");
-//     }
-//
-// }
+passwordField.addEventListener("input", (event) => {
+    passwordField.setCustomValidity('');
 
-passwordField.addEventListener("input", (event)=>
-{
-    console.log(`Validity - ${passwordField.checkValidity()} ${passwordField.validity.valid}`)
-    if (passwordField.checkValidity() === true) {
-        passwordField.style.border = validInputBorder;
+    if (!!passwordField.validity.valid) {
         passwordField.setCustomValidity("");
+    } else if (passwordField.value.length < 6) {
+        passwordField.setCustomValidity("Password length must be equal or bigger than 6");
     } else {
-        passwordField.style.border = invalidInputBorder
         passwordField.setCustomValidity("Password must contain capital, lowercase letters and digits");
     }
 });
+
+let phoneField = document.getElementById("phone");
+phoneField.oninput = (event) => {
+    phoneField.setCustomValidity('');
+
+    if (!!phoneField.validity.valid) {
+        phoneField.setCustomValidity("");
+    } else if (!phoneField.value.toString().startsWith('+7')) {
+        phoneField.setCustomValidity("Phone must starts with +7");
+    } else {
+        phoneField.setCustomValidity("You're missing some digits");
+    }
+};
+
+let nameField = document.getElementById("full_name");
+nameField.oninput = (event) => {
+    nameField.setCustomValidity('');
+    if (!!nameField.validity.valid) {
+        nameField.setCustomValidity("");
+    }
+    else {
+        nameField.setCustomValidity("Sorry, full name can't be shorter than 2 symbols");
+    }
+}

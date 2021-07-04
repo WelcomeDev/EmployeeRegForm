@@ -33,6 +33,10 @@
     padding: 2px;
 }
 
+all-width-input:invalid{
+    border: red 1px solid;
+}
+
 .expanded-text {
     display: block;
     width: 100%;
