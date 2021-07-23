@@ -1,0 +1,71 @@
+@import "dropstyle.css";
+@import "fonts.css";
+
+.reg-form {
+    background: rgba(133, 192, 255, 0.25);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.accept-manual,
+.inputs {
+    padding: 5px;
+}
+
+.inputs {
+    background: rgba(164, 225, 255, 0.45);
+    border-radius: 10px;
+}
+
+.inputs div {
+    margin: 4px 6px;
+}
+
+.inputs .one-row-label {
+    display: inline-block;
+    width: 100px;
+}
+
+.all-width-input {
+    width: calc(100% - 100px - 10px);
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+all-width-input:invalid{
+    border: red 1px solid;
+}
+
+.expanded-text {
+    display: block;
+    width: 100%;
+    resize: none;
+}
+
+.submit-button,
+.view-stuff-button{
+    margin: 5px auto;
+    display: block;
+    padding: 2px;
+    border-radius: 10px;
+    font-size: 28px;
+    background: transparent;
+    border: #0c80c5 1px solid;
+    color: #848484;
+}
+
+.submit-button:hover,
+.view-stuff-button:hover {
+    border: #0c80c5 2px solid;
+    padding: 1px;
+    color: #313134;
+}
+
+.reg-content{
+    width: 500px;
+    margin: 10px auto;
+}
+
+.view-stuff-button{
+}
